@@ -174,7 +174,7 @@ header ul li ul li a {
 /*
     Sidebar
  */
-
+ 
 
 
 
@@ -707,6 +707,7 @@ img {
     
     vertical-align: middle;
     border-style: none;
+    
 }
 
 .b-news__name {
@@ -836,14 +837,7 @@ a.b-block:hover {
     .container-lg {
         max-width: 960px;
     }
-
-
-
-
-
-    
-
-    .logo-text {
+.logo-text {
         font-size: 24px;
     }
 
@@ -869,6 +863,7 @@ a.b-block:hover {
     .container-lg,
     .container-xl {
         max-width: 1210px;
+        
     }
 }
 
