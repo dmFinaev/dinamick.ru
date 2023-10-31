@@ -54,11 +54,12 @@ include "../app/controllers/topics.php";
             <!--<p>Выберите группу вопросов для подготовки к тестированию:</p>-->
         </div>
         <div class="industrial-link">
-            <p><a href="/fire-safety/specialist-fire-prevention.php" class="link-success">Специалист по противопожарной профилактике</a></p>
-            <p><a href="/fire-safety/B-specialist-fire-prevention.php" class="link-success">Пожарная безопасность для руководителей и ответственных лиц</a></p>
-            <p><a href="/fire-safety/C-specialist-fire-prevention.php" class="link-success">Пожарная безопасность для руководителей и ответственных лиц эксплуатирующих и управляющих<br> организаций</a></p>
-            <p><a href="/fire-safety/D-specialist-fire-prevention.php" class="link-success">Пожарная безопасность для главных специалистов технического и производственного профиля</a></p>
-            <p><a href="/fire-safety/E-specialist-fire-prevention.php" class="link-success">Пожарная безопасность для лиц, ответственных за проведение противопожарного инструктажа</a></p>
+            <p><a href="/fire-safety/specialist-fire-prevention.php" class="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Специалист по противопожарной профилактике</a></p>
+            <p><a href="/fire-safety/B-specialist-fire-prevention.php" class="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Пожарная безопасность для руководителей и ответственных лиц</a></p>
+            <p><a href="/fire-safety/C-specialist-fire-prevention.php" class="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Пожарная безопасность для руководителей и ответственных лиц эксплуатирующих и управляющих<br> организаций</a></p>
+            <p><a href="/fire-safety/D-specialist-fire-prevention.php" class="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Пожарная безопасность для главных специалистов технического и производственного профиля</a></p>
+            <p><a href="/fire-safety/E-specialist-fire-prevention.php" class="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Пожарная безопасность для лиц, ответственных за проведение противопожарного инструктажа</a></p>
+
         </div>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">

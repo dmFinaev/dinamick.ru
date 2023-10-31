@@ -68,7 +68,7 @@ $post = selectPostFromPostsWithUsersOnSingle('posts', 'users', $_GET['post']);
 
 
                     <!-- ИНКЛЮДИМ HTML БЛОК С КОММЕНТАРИЯМИ  --->
-
+                    <?php include(ROOT_PATH . "/app/include/comments.php"); ?>
                 </div>
 
             </div>

@@ -30,12 +30,15 @@ include "../app/controllers/topics.php";
 
 <body>
     <?php include(ROOT_PATH . "/app/include/header.php"); ?>
+    <div class="container">
+        <img src="/img/scale_1200 (1).jpeg" class="img-fluid" alt="...">
+    </div>
     <main>
 
         <ol itemscope="" itemtype="http://schema.org/BreadcrumbList" class="flex row1 centered breadcrumbs">
             <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <a itemprop="item" href="/testing.php">
-                    <span itemprop="name">Тестирование</span>
+                <a itemprop="item" href="/index.php">
+                    <span itemprop="name">Главная</span>
                 </a>
                 <meta itemprop="position" content="1">
             </li>
@@ -51,16 +54,13 @@ include "../app/controllers/topics.php";
     <div class="container">
         <div class="industrial-title">
             <h2>Пожарная безопасность</h2>
-            <p>Выберите группу вопросов для подготовки к тестированию:</p>
+            <p>Выберите курс для подготовки к тестированию:</p>
         </div>
         <div class="industrial-link">
-            <p><a href="/fire-safety/fire-safety-for-managers.php" class="link-success">Пожарная безопасность для руководителей и специалистов</a></p>
-            <p><a href="/fire-safety/design-fire-safety/fire-safety-designers.php" class="link-success">Проектирование в сфере пожарной безопасности</a></p>
+            <p><a href="/fire-safety/fire-safety-for-managers.php" class="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Пожарная безопасность для руководителей и специалистов</a></p>
+            <p><a href="/fire-safety/design-fire-safety/fire-safety-designers.php" class="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Проектирование в сфере пожарной безопасности</a></p>
         </div>
-
-
     </div>
-
 
     <!-- footer -->
     <?php include(ROOT_PATH . "/app/include/footer.php"); ?>

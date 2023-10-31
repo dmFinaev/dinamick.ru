@@ -45,6 +45,8 @@ include "../../app/controllers/users.php";
                 <div class="col-3">Email</div>
                 <div class="col-2">Роль</div>
                 <div class="col-4">Управление</div>
+
+
             </div>
             <?php foreach ($users as $key => $user) : ?>
                 <div class="row post">

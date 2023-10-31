@@ -27,6 +27,9 @@ include "../app/controllers/topics.php";
 
 <body>
     <?php include(ROOT_PATH . "/app/include/header.php"); ?>
+    <div class="container">
+        <img src="/img/bezopasn.jpg" class="img-fluid" alt="...">
+    </div>
     <main>
 
         <ol itemscope="" itemtype="http://schema.org/BreadcrumbList" class="flex row1 centered breadcrumbs">
@@ -45,15 +48,17 @@ include "../app/controllers/topics.php";
         </ol>
     </main>
 
+
     <div class="container">
         <div class="industrial-title">
             <h2>Охрана труда</h2>
-            <p>Выберите группу вопросов для подготовки к тестированию:</p>
+            <p>Выберите курс для подготовки к тестированию:</p>
         </div>
         <div class="industrial-link">
-            <p><a href="/labor-protection/A-labor-protection/A-labor-protection.php" class="link-success">Охрана труда А. Общие вопросы ОТ и Проектрования СУОТ</a></p>
-            <p><a href="/labor-protection/B-labor-protection/B-labor-protection.php" class="link-success">Охрана труда Б. Безопасные методы и приемы выполнения работ</a></p>
-            <p><a href="/labor-protection/S-labor-protection/S-labor-protection.php" class="link-success">Охрана труда СИЗ. Обучение по использованию средств индивидуальной защиты</a></p>
+            <p><a href="/labor-protection/A-labor-protection/A-labor-protection.php" class="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Охрана труда А. Общие вопросы ОТ и Проектрования СУОТ</a></p>
+            <p><a href="/labor-protection/B-labor-protection/B-labor-protection.php" class="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Охрана труда Б. Безопасные методы и приемы выполнения работ</a></p>
+            <p><a href="/labor-protection/S-labor-protection/S-labor-protection.php" class="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Охрана труда СИЗ. Обучение по использованию средств индивидуальной защиты</a></p>
+
         </div>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">

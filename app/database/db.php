@@ -97,7 +97,6 @@ function insert($table, $params)
     }
     $sql = "INSERT INTO $table ($cool) VALUES ($mask)";
 
-
     $query = $pdo->prepare($sql);
     $query->execute();
     dbCheckError($query);

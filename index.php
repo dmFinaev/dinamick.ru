@@ -49,13 +49,13 @@ $topTopic = selectTopTopicFromPostsOnIndex('posts');
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/img/379986.jpeg" class="d-block w-100" alt="...">
+                    <img src="/img/XXL_height (2).webp" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/охрана труда в тэк.jpg" class="d-block w-100" alt="...">
+                    <img src="/img/e01470b1-ab11-36a4-90b1-7ca1db6d6fab.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/fire-safety.jpg" class="d-block w-100" alt="...">
+                    <img src="/img/Miniaturas-04-1-1536x960.png" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -77,7 +77,24 @@ $topTopic = selectTopTopicFromPostsOnIndex('posts');
                 <div class="js-search-result">
                     <div class="b-program">
                         <div class="row">
+                            <div class="container">
+                                <div class="content row">
+                                    <div class="sidebar col-md-4 col-12">
 
+                                        <div class="section search">
+                                            <h3>Доступ к курсам</h3>
+                                            <p class="section__text"></p>
+                                            <form action="search.php" method="post">
+                                                <input type="text" name="search-term" class="text-input" placeholder="Введите токин курса...">
+                                                <p class="section__text"></p>
+                                                <button type="submit" class="btn btn-primary" name="button-cur">Вперёд</button>
+
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="col-12 col-lg-6 col-xl-4 mb-1">
                                 <div class="b-block b-block_hover d-flex flex-column justify-content-between align-items-center position-relative">
@@ -121,6 +138,7 @@ $topTopic = selectTopTopicFromPostsOnIndex('posts');
                                     <a href="/fire-safety/fire-safety.php" class="b-link align-self-end stretched-link">Подробнее</a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -132,19 +150,14 @@ $topTopic = selectTopTopicFromPostsOnIndex('posts');
             <div class="sidebar col-md-4 col-12">
 
                 <div class="section search">
-                    <h3>Доступ к курсам</h3>
-                    <p class="section__text"></p>
-                    <form action="search.php" method="post">
-                        <input type="text" name="search-term" class="text-input" placeholder="Введите токин курса...">
-                        <p class="section__text"></p>
-                        <button type="submit" class="btn btn-primary" name="button-cur">Вперёд</button>
-
+                    <!-- ИНКЛЮДИМ HTML БЛОК С КОММЕНТАРИЯМИ  --->
+                    <?php include(ROOT_PATH . "/app/include/comments.php"); ?>
                     </form>
                 </div>
+
             </div>
         </div>
     </div>
-
     <!-- footer -->
     <?php include(ROOT_PATH . "/app/include/footer.php"); ?>
     <!-- // footer -->

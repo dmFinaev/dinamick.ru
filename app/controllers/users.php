@@ -78,7 +78,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-log'])) {
 } else {
     $email = '';
 }
+// Ваш код для сохранения данных в базу данных
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['text'])) {
+        // Получаем данные из POST-запроса
+        $result = $_POST['text'];
 
+        // Подготовленный запрос для обновления результатов
+        $query = "UPDATE users SET results = :result WHERE id = :id";
+        $stmt = $pdo->prepare($query);
+
+        // Привязываем значения к параметрам
+        $stmt->bindParam(':result', $result);
+        $stmt->bindParam(':id', $_SESSION['id']);
+
+        // Выполняем запрос
+        if ($stmt->execute()) {
+            echo "Результаты успешно сохранены в базе данных!";
+        } else {
+            echo "Произошла ошибка при сохранении результатов.";
+        }
+    }
+}
 
 // Код добавления пользователя в админке
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create-user'])) {
@@ -107,7 +128,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create-user'])) {
                 'admin' => $admin,
                 'username' => $login,
                 'email' => $email,
-                'password' => $pass
+                'password' => $pass,
+                'results' =>  $result
             ];
             $id = insert('users', $user);
             $user = selectOne('users', ['id' => $id]);
@@ -170,6 +192,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update-user'])) {
     $username = $user['username'];
     $email = $user['email'];
 }
+
+/*if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['text'])) {
+        // Получаем данные из POST-запроса
+        $result = $_POST['text'];
+
+        // Подготовленный запрос для обновления результатов в таблице "testing"
+        $query = "UPDATE testing SET results = :result WHERE id = :id";
+        $stmt = $pdo->prepare($query);
+
+        // Привязываем значения к параметрам
+        $stmt->bindParam(':result', $result);
+        $stmt->bindParam(':id', $_SESSION['id']);
+
+        // Выполняем запрос
+        if ($stmt->execute()) {
+            echo "Результаты успешно сохранены в таблице 'testing' в базе данных!";
+        } else {
+            echo "Произошла ошибка при сохранении результатов.";
+        }
+    }
+}*/
+
+//Код добавления результатов тестов 
+
 
 //if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['pub_id'])){
 //    $id = $_GET['pub_id'];

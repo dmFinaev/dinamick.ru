@@ -11,7 +11,11 @@
             </li>
 
             <li>
-                <a href="<?php echo BASE_URL . "/admin/comments/index.php"; ?>">Ответы</a>
+                <a href="<?php echo BASE_URL . "/admin/comments/index.php"; ?>">Коментарии</a>
+
+            </li>
+            <li>
+                <a href="<?php echo BASE_URL . "/admin/results/index.php"; ?>">Результаты</a>
             </li>
         </ul>
     </div>

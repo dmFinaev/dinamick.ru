@@ -59,7 +59,36 @@ include "../../app/controllers/topics.php";
                     <div class="col-lg-8 mb-3">
 
                         <div class="industrial-title">
-                            <h2>Охрана труда СИЗ. Обучение по использованию средств индивидуальной защиты</h2>
+                            <h2>Учебный материал по курсу. <br> Охрана труда СИЗ. Обучение по использованию средств индивидуальной защиты</h2>
+                            <div class="container">
+                                <div class="industrial-link">
+                                    <p><a href="/img/Средства индивидуальной защиты/1 Опасные и вредные произв.факторы.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">1 Опасные и вредные произв.факторы</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/2 Общие понятия обеспечения безопасности.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">2 Общие понятия обеспечения безопасности</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/3 Основные принципы безопасности труда.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">3 Основные принципы безопасности труда</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/4 Порядок обеспечения работников средствами индивидуальной защиты.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">4 Порядок обеспечения работников средствами индивидуальной защиты</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/5 Требования к средствам индивидуальной защиты и правила выдачи.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">5 Требования к средствам индивидуальной защиты и правила выдачи</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/6 Дежурные СИЗ.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">6 Дежурные СИЗ.</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/7 Инструкция по применению средств индивидуальной защиты (СИЗ).pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">7 Инструкция по применению средств индивидуальной защиты (СИЗ)</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/8 Дезактивация СИЗ.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">8 Дезактивация СИЗ</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/9 Классификация средств индивидуальной защиты.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">9 Классификация средств индивидуальной защиты</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/10 Средства индивидуальной защиты человека от химических и биологических негативных факторов.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">10 Средства индивидуальной защиты человека от химических и биологических негативных факторов</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/11 Средства индивидуальной защиты.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">11 Средства индивидуальной защиты</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/12 Респиратор.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">12 Респиратор</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/13 СИЗ для глаз и лица.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">13 СИЗ для глаз и лица</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/14 Средства индивидуальной защиты органов слуха.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">14 Средства индивидуальной защиты органов слуха</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/15 СИЗ при работе на высоте.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">15 СИЗ при работе на высоте</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/16 Средства Индивидуальной Защиты от падения с высоты.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">16 Средства Индивидуальной Защиты от падения с высоты</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/17 Спецодежда.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">17 Спецодежда</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/Постановление от 24.12.2021 г. 2464.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">Постановление от 24.12.2021 г. 2464</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/Презентация.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">Презентация</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/Средства защиты работающих.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">Средства защиты работающих</a></p>
+                                    <p><a href="/img/Средства индивидуальной защиты/Типовые нормы бесплатной выдачи работникам смывающих и (или) обезвреживающих средств.pdf" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">Типовые нормы бесплатной выдачи работникам смывающих и (или) обезвреживающих средств</a></p>
+                                    <div class="video">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3N-AolCYmNQ?si=TXAmFk2pTxnJqST8&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="nav-title">Проверка знаний по теме курса</h2>
                             <p>Выберите билет.</p>
                             <ul>
                                 <li>Все вопросы разделены по билетам по порядку. </li>
@@ -67,12 +96,25 @@ include "../../app/controllers/topics.php";
                             </ul>
                             <p><strong>Ответьте на все вопросы </strong>билета и нажмите кнопку <strong>"Показать результаты".</strong> <br> После этого вы увидите правильный вариант.</p>
                             <div class="ticket-grid">
-                                <a class="btn btn-secondary" href="/labor-protection/S-labor-protection/S1-ticket.php">Билет№1</a>
-                                <a class="btn btn-secondary" href="/labor-protection/S-labor-protection/S2-ticket.php">Билет№2</a>
-                                <a class="btn btn-secondary" href="/labor-protection/S-labor-protection/S3-ticket.php">Билет№3</a>
-                                <a class="btn btn-secondary" href="/labor-protection/S-labor-protection/S4-ticket.php">Билет№4</a>
-                                <a class="btn btn-secondary" href="/labor-protection/S-labor-protection/S5-ticket.php">Билет№5</a>
+                                <a class="btn btn-primary" href="/labor-protection/S-labor-protection/S1-ticket.php">Билет№1</a>
+                                <a class="btn btn-primary" href="/labor-protection/S-labor-protection/S2-ticket.php">Билет№2</a>
+                                <a class="btn btn-primary" href="/labor-protection/S-labor-protection/S3-ticket.php">Билет№3</a>
+                                <a class="btn btn-primary" href="/labor-protection/S-labor-protection/S4-ticket.php">Билет№4</a>
+                                <a class="btn btn-primary" href="/labor-protection/S-labor-protection/S5-ticket.php">Билет№5</a>
 
+                            </div>
+
+                            <div class="container mb-xl-4">
+
+                                <div class="row mb-lg-5 mb-4">
+                                    <h2 class="nav-title">Итоговое тестирования</h2>
+                                    <p>Итоговое тестирование содержить 10 вопросов по всей теми курса. И окончательное подвидение итогов.</p>
+                                    <ul class="nav nav-pills">
+
+                                        <a class="btn btn-primary" href="/labor-protection/S-labor-protection/S-labor-protection-testing.php">Начать</a>
+
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

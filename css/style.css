@@ -36,13 +36,13 @@ input {
 }
 
 
-
+/*#0d6efd, #008484(header), #006669*/
 
 /*
     HEADER
  */
 header {
-    background: #008484;
+    background: #fff;
     height: 70px;
 }
 
@@ -80,12 +80,12 @@ header ul li a {
     display: block;
     font-size: 1.2rem;
     text-decoration: none;
-    color: #ffffff;
+    color: #000;
     padding: 22px;
 }
 
 header ul li a:hover {
-    background: #006669;
+    background: #0d6efd;
     transition: 0.5s;
     color: #fff;
 }
@@ -117,7 +117,9 @@ header ul li ul li a {
     margin: 10px;
 }
 
-
+.mb-3 {
+    margin-bottom: 2rem!important;
+}
 
 .user {
     padding-right: 10px;
@@ -189,7 +191,7 @@ header ul li ul li a {
 .sidebar .section {
     background: #ffffff;
     padding: 20px;
-    border-radius: 3px;
+    border-radius: 10px;
     margin-bottom: 130px;
 }
 

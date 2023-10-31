@@ -26,7 +26,34 @@ include "../../app/controllers/topics.php";
 
 <body>
     <?php include(ROOT_PATH . "/app/include/header.php"); ?>
+    <main>
 
+        <ol itemscope="" itemtype="http://schema.org/BreadcrumbList" class="flex row1 centered breadcrumbs">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/index.php">
+                    <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/labor-protection/labor-protection.php">
+                    <span itemprop="name">Охрана труда</span>
+                </a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/labor-protection/S-labor-protection/S-labor-protection.php">
+                    <span itemprop="name">Охрана труда СИЗ. Обучение по использованию средств индивидуальной защиты</span>
+                </a>
+                <meta itemprop="position" content="3">
+            </li>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <span itemprop="name">Билет№4</span>
+                <meta itemprop="item" content="./guest_1.html">
+                <meta itemprop="position" content="3">
+            </li>
+        </ol>
+    </main>
 
     <div class="container mb-xl-3">
         <div class="row mb-lg-5 mb-3">
