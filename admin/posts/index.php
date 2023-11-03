@@ -33,7 +33,7 @@ include "../../app/controllers/records.php";
 
         <div class="posts col-9">
             <div class="button row">
-                <a href="<?php echo BASE_URL . "/admin/posts/create.php"; ?>" class="col-2 btn btn-success">Создать</a>
+                <a href="<?php echo BASE_URL . "/admin/posts/create.php"; ?>" class="col-2 btn btn-primary">Создать</a>
                 <span class="col-1"></span>
                 <a href="<?php echo BASE_URL . "/admin/posts/index.php"; ?>" class="col-3 btn btn-warning">Редактировать</a>
             </div>

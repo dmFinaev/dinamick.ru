@@ -27,7 +27,7 @@ include "../app/controllers/topics.php";
 
 <body>
     <?php include(ROOT_PATH . "/app/include/header.php"); ?>
-    <div class="container">
+    <div class="container py-2 py-md-4 pb-2">
         <img src="/img/bezopasn.jpg" class="img-fluid" alt="...">
     </div>
     <main>
@@ -49,7 +49,7 @@ include "../app/controllers/topics.php";
     </main>
 
 
-    <div class="container">
+    <div class="container py-2 py-md-4 pb-2">
         <div class="industrial-title">
             <h2>Охрана труда</h2>
             <p>Выберите курс для подготовки к тестированию:</p>
@@ -91,7 +91,6 @@ include "../app/controllers/topics.php";
         </div>
 
     </div>
-
 
     <!-- footer -->
     <?php include(ROOT_PATH . "/app/include/footer.php"); ?>

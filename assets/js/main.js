@@ -137,3 +137,23 @@ function showResults() {
 
   
 }
+
+    $(document).ready(function () {
+        $("#comment-form").submit(function (event) {
+            event.preventDefault(); // Предотвращаем стандартное действие отправки формы
+
+            // Получаем данные формы
+            var formData = $(this).serialize();
+
+            // Отправляем асинхронный POST-запрос на сервер
+            $.ajax({
+                type: "POST",
+                url: "/app/controllers/topics.php",
+                data: formData,
+                success: function (response) {
+                    // Здесь вы можете обновить отображение комментариев или выполнить другие действия
+                }
+            });
+        });
+    });
+

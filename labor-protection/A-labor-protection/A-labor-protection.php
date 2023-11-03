@@ -167,15 +167,76 @@ include "../../app/controllers/topics.php";
             </div>
         </div>
     </div>
+    <!-- Вывод массива с ошибками -->
+    <div class="mb-12 col-12 col-md-12 err">
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
-        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
-    </svg>
+        <?php include ROOT_PATH . "/app/helps/errorInfo.php"; ?>
+    </div>
+    <div class="cpl-md-6 col-6 comments">
+        <h3>Написать сообщение</h3>
+        <form action="" method="post" class="my_form" id="comment-form">
+            <!--<input type="hidden" name="page" value="">-->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Ваше имя</label>
+                <input name="username" type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Ваше сообщение</label>
+                <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" name="goComment" class="btn btn-primary">Отправить</button>
+            </div>
+        </form>
+
+        <hr>
+        <?php // Подготовленный запрос для извлечения комментариев
+        $commentsQuery = $pdo->query("SELECT * FROM comments ORDER BY date DESC");
+
+        // Проверяем, есть ли комментарии
+        if ($commentsQuery->rowCount() > 0) {
+            echo '<div class="comments-list">';
+
+            // Выводим каждый комментарий
+            while ($comment = $commentsQuery->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="comment">';
+                echo '<p><strong>' . htmlspecialchars($comment['username']) . '</strong> (' . $comment['date'] . ')</p>';
+                echo '<p>' . htmlspecialchars($comment['comment']) . '</p>';
+                echo '</div>';
+            }
+
+            echo '</div>';
+        } else {
+            echo '<p>Пока нет комментариев.</p>';
+        }
+        ?>
+        <script>
+            $(document).ready(function() {
+                $("#comment-form").submit(function(event) {
+                    event.preventDefault(); // Предотвращаем стандартное действие отправки формы
+
+                    // Получаем данные формы
+                    var formData = $(this).serialize();
+
+                    // Отправляем асинхронный POST-запрос на сервер
+                    $.ajax({
+                        type: "POST",
+                        url: "/app/controllers/topics.php",
+                        data: formData,
+                        success: function(response) {
+                            // Здесь вы можете обновить отображение комментариев или выполнить другие действия
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
     <!-- footer -->
     <?php include(ROOT_PATH . "/app/include/footer.php"); ?>
     <!-- // footer -->
     <script src="/assets/js/scripts.js"></script>
+    <script src="/jquery/jquery v3.6.4.min.js"></script>
+
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 

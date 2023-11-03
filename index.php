@@ -40,7 +40,7 @@ $topTopic = selectTopTopicFromPostsOnIndex('posts');
 <body>
     <?php include(ROOT_PATH . "/app/include/header.php"); ?>
 
-    <div class="container">
+    <div class="container py-2 py-md-4 pb-2">
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -137,6 +137,7 @@ $topTopic = selectTopTopicFromPostsOnIndex('posts');
                                     <div class="b-news__name align-self-start mb-1" title="Пожарная безопасность">Пожарная безопасность</div>
                                     <a href="/fire-safety/fire-safety.php" class="b-link align-self-end stretched-link">Подробнее</a>
                                 </div>
+
                             </div>
 
                         </div>
@@ -144,20 +145,9 @@ $topTopic = selectTopTopicFromPostsOnIndex('posts');
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="content row">
-            <div class="sidebar col-md-4 col-12">
 
-                <div class="section search">
-                    <!-- ИНКЛЮДИМ HTML БЛОК С КОММЕНТАРИЯМИ  --->
-                    <?php include(ROOT_PATH . "/app/include/comments.php"); ?>
-                    </form>
-                </div>
-
-            </div>
-        </div>
     </div>
+
     <!-- footer -->
     <?php include(ROOT_PATH . "/app/include/footer.php"); ?>
     <!-- // footer -->

@@ -64,54 +64,28 @@ $post = selectPostFromPostsWithUsersOnSingle('posts', 'users', $_GET['post']);
                             </li>
                         </ul>
                     </div>
+                </div>
+                <!-- sidebar Content -->
+                <div class="sidebar col-md-3 col-12">
 
+                    <div class="section search">
+                        <h3>Курсы</h3>
+                        <p class="section__text">Чтобы вернутся к списку курсов </p>
+                        <form action="search.php" method="post">
+                            <input type="text" name="search-term" class="text-input" placeholder="Введите токин курса...">
+                            <p class="section__text"></p>
+                            <button type="submit" class="btn btn-primary" name="button-cur">Вперёд</button>
 
-
+                        </form>
+                    </div>
                     <!-- ИНКЛЮДИМ HTML БЛОК С КОММЕНТАРИЯМИ  --->
-                    <?php include(ROOT_PATH . "/app/include/comments.php"); ?>
+                    <?php include("app/include/comments.php"); ?>
+
+
                 </div>
-
-            </div>
-            <!-- sidebar Content -->
-            <div class="sidebar col-md-3 col-12">
-
-                <div class="section search">
-                    <h3>Курсы</h3>
-                    <p class="section__text">Чтобы вернутся к списку курсов </p>
-                    <form action="search.php" method="post">
-                        <input type="text" name="search-term" class="text-input" placeholder="Введите токин курса...">
-                        <p class="section__text"></p>
-                        <button type="submit" class="btn btn-primary" name="button-cur">Вперёд</button>
-
-                    </form>
-                </div>
-                <h3>Написать администратору курса</h3>
-                <form method="post">
-                    <div class="mb-3">
-                        <select class="form-control" name="subject">
-                            <option disabled selected>Тема письма</option>
-                            <option value="1">Вопрос по курсу</option>
-                            <option value="2">Личный вопрос</option>
-                            <option value="3">Отзыв</option>
-                            <label for="name">Name:</label>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email адрес (при регистрации)</label>
-                        <input name="email" type="email" class="form-control" placeholder="name@example.com" maxlength="50" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Напишите ваши сообщение</label>
-                        <textarea name="message" class="form-control" maxlength="250" required></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" name="goComment" class="btn btn-primary">Отправить</button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
-
 
 
     <!-- footer -->

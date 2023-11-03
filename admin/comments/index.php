@@ -1,9 +1,9 @@
 <?php
-
-include "../../app/controllers/commentaries.php";
+include "../../path.php";
+include "../../app/controllers/topics.php";
 ?>
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <!-- Required meta tags -->
@@ -25,45 +25,72 @@ include "../../app/controllers/commentaries.php";
 
 <body>
 
-    <?php include(ROOT_PATH . "/app/include/header-admin.php"); ?>
+    <?php include("../../app/include/header-admin.php"); ?>
 
     <div class="container">
-        <?php include ROOT_PATH . "/app/include/sidebar-admin.php"; ?>
+        <?php include "../../app/include/sidebar-admin.php"; ?>
 
-        <div class="posts col-9">
-            <div class="row title-table">
-                <h2>Управление комментариями</h2>
-                <div class="mb-12 col-12 col-md-12 err">
-                    <p><?= $_SESSION['error']; ?></p>
+        <div class="cpl-md-6 col-6 comments">
+            <h3> Написать сообщение</h3>
+            <form action="" method="post" class="my_form" id="comment-form">
+                <!--<input type="hidden" name="page" value="">-->
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Ваше имя</label>
+                    <input name="username" type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                 </div>
-                <div class="col-1">ID</div>
-                <div class="col-5">Текст</div>
-                <div class="col-2">Автор</div>
-                <div class="col-4">Управление</div>
-            </div>
-            <?php foreach ($commentsForAdm as $key => $comment) : ?>
-                <div class="row post">
-                    <div class="id col-1"><?= $comment['id']; ?></div>
-                    <div class="title col-5"><?= mb_substr($comment['comment'], 0, 50, 'UTF-8') . '...'  ?></div>
-                    <?php
-                    $user = $comment['email'];
-                    $user = explode('@', $user);
-                    $user = $user[0];
-                    ?>
-                    <div class="author col-3"><?= $user . "@"; ?></div>
-                    <div class="red col-1"><a href="edit.php?id=<?= $comment['id']; ?>">edit</a></div>
-                    <div class="del col-1"><a href="edit.php?delete_id=<?= $comment['id']; ?>">delete</a></div>
-                    <?php if ($comment['status']) : ?>
-                        <div class="status col-1"><a href="edit.php?publish=0&pub_id=<?= $comment['id']; ?>">unpublish</a></div>
-                    <?php else : ?>
-                        <div class="status col-1"><a href="edit.php?publish=1&pub_id=<?= $comment['id']; ?>">publish</a></div>
-                    <?php endif; ?>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Ваше сообщение</label>
+                    <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
                 </div>
-            <?php endforeach; ?>
+                <div class="col-12">
+                    <button type="submit" name="goComment" class="btn btn-primary">Отправить</button>
+                </div>
+            </form>
+
+            <hr>
+            <?php // Подготовленный запрос для извлечения комментариев
+            $commentsQuery = $pdo->query("SELECT * FROM comments ORDER BY date DESC");
+
+            // Проверяем, есть ли комментарии
+            if ($commentsQuery->rowCount() > 0) {
+                echo '<div class="comments-list">';
+
+                // Выводим каждый комментарий
+                while ($comment = $commentsQuery->fetch(PDO::FETCH_ASSOC)) {
+                    echo '<div class="comment">';
+                    echo '<p><strong>' . htmlspecialchars($comment['username']) . '</strong> (' . $comment['date'] . ')</p>';
+                    echo '<p>' . htmlspecialchars($comment['comment']) . '</p>';
+                    echo '</div>';
+                }
+
+                echo '</div>';
+            } else {
+                echo '<p>Пока нет комментариев.</p>';
+            }
+            ?>
+            <script>
+                $(document).ready(function() {
+                    $("#comment-form").submit(function(event) {
+                        event.preventDefault(); // Предотвращаем стандартное действие отправки формы
+
+                        // Получаем данные формы
+                        var formData = $(this).serialize();
+
+                        // Отправляем асинхронный POST-запрос на сервер
+                        $.ajax({
+                            type: "POST",
+                            url: "/app/controllers/topics.php",
+                            data: formData,
+                            success: function(response) {
+                                // Здесь вы можете обновить отображение комментариев или выполнить другие действия
+                            }
+                        });
+                    });
+                });
+            </script>
         </div>
     </div>
     </div>
-
 
     <!-- footer -->
     <?php include(ROOT_PATH . "/app/include/footer.php"); ?>
@@ -74,7 +101,8 @@ include "../../app/controllers/commentaries.php";
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
+    <script src="/assets/js/scripts.js"></script>
+    <script src="/jquery/jquery v3.6.4.min.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
